@@ -26,7 +26,7 @@ var upload = multer({
       crypto.randomBytes(16, (err, hash) => {
         if (err) cb(err);
 
-        const filename = `${hash.toString('hex')}-${filename.originalname}`;
+        const filename = `${hash.toString('hex')}-${file.originalname}`;
         cb(null, filename);
       });
     },
