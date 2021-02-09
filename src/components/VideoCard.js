@@ -8,9 +8,6 @@ const useStyles = makeStyles(() => ({
   img: {
     width: '100%',
   },
-  avatar: {
-    marginRight: '8px',
-  },
   caption: {
     fontWeight: 500,
     display: '-webkit-box',
@@ -26,12 +23,8 @@ function VideoCard({ item }) {
     <Box>
       <img src={item.thumb} alt={item.title} className={classes.img} />
       <Box display="flex" mt="1">
-        <Box>
-          <Avatar
-            alt={item.authorName}
-            src={item.authorAvatar}
-            className={classes.avatar}
-          >
+        <Box mr={2}>
+          <Avatar alt={item.authorName} src={item.authorAvatar}>
             SS
           </Avatar>
         </Box>
